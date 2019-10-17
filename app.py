@@ -25,15 +25,16 @@ while is_hot == False:
 #     print(el)
 
 
-# def addPrices:
-#     sum = 0
-#     prices = [10, 20, 30]
+def addPrices():
+    sum = 0
+    prices = [10, 20, 30]
 
-#     for price in prices:
-#         sum += price
-#     print(sum)
+    for price in prices:
+        sum += price
+    print(sum)
 
 
+addPrices()
 # tuples are immutable
 numbers = (1, 2, 3, 4)
 
@@ -47,14 +48,14 @@ def two_num_sum(arr, target):
     left = 0
     right = len(arr) - 1
     while left != right:
-        possSum = arr[left] + arr[right]
-        if target == possSum:
+        possibleSum = arr[left] + arr[right]
+        if target == possibleSum:
             result.append([arr[left], arr[right]])
             left += 1
             right -= 1
-        elif possSum < target:
+        elif possibleSum < target:
             left += 1
-        elif possSum > target:
+        elif possibleSum > target:
             right -= 1
     return result
 
@@ -62,3 +63,15 @@ def two_num_sum(arr, target):
 arrA = [1, 3, 4, 7, 8, 33]
 
 print(two_num_sum(arrA, 10))
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print('move')
+
+    def draw(self):
+        print('draw')
