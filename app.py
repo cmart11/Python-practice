@@ -75,3 +75,31 @@ class Point:
 
     def draw(self):
         print('draw')
+
+
+# Permutations
+def permutations(arr):
+    perms = []
+    perm_helper(0, perms, arr)
+    return perms
+
+
+def perm_helper(i, perms, arr):
+    if i == len(arr) - 1:
+        perms.append(arr[:])
+    else:
+        for j in range(i, len(arr)):
+            swap(i, j, arr)
+            perm_helper(i + 1, perms, arr)
+            swap(i, j, arr)
+
+
+def swap(i, j, arr):
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+
+
+perm_result = permutations([1, 2, 3])
+
+print(f'Permutations: {perm_result}')
