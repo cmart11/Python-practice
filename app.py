@@ -1,7 +1,7 @@
 import math
 
 
-name = 'cis'.upper()
+name = 'cris'.upper()
 age = 90
 
 msg = f'{name} is {age} years old.'
